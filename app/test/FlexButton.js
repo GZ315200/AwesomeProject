@@ -10,7 +10,7 @@ import {
 const FlexButton = (props) => {
     return (
         <TouchableOpacity style={styles.button} onPress={props.onPress}>
-            <Text style={styles.btnText}>Press Here</Text>
+            <Text style={styles.btnText}>{props.title}</Text>
         </TouchableOpacity>
     );
 }

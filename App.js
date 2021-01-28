@@ -32,7 +32,7 @@ export default App = () => {
         <Text>you checked {count} times</Text>
       </View>
       <View>
-        <FlexButton onPress={onPress}/>
+        <FlexButton onPress={onPress} title='Press me'/>
       </View>
     </SafeAreaView>
   );
