@@ -11,9 +11,10 @@ import React, { useState } from 'react';
 import {
   View,
   Text,
-  Button,
   SafeAreaView,
-  StyleSheet
+  StyleSheet,
+  TouchableOpacity,
+  Platform
 } from 'react-native';
 
 // import {
@@ -28,7 +29,6 @@ import {
 import Greet from './app/test/Greet';
 
 
-
 export default App = () => {
   const [count, setCount] = useState(0);
 
@@ -39,10 +39,13 @@ export default App = () => {
   return (
     // <Greet></Greet>
     <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>you checked {count} times</Text>
-      <View style={styles.button}>
-        <Button onPress={this.onPress} title="Press me">
-        </Button>
+      <View style={styles.countContainer}>
+        <Text>you checked {count} times</Text>
+      </View>
+      <View>
+        <TouchableOpacity style={styles.button} onPress={onPress}>
+          <Text style={styles.btnText}>Press Here</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -53,16 +56,25 @@ export default App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignContent: "center"
-  },
-  text: {
-    left: 140
+    justifyContent: 'flex-end',
+    paddingHorizontal: 10,
   },
   button: {
-    alignItems: 'center',
+    alignItems: "center",
+    backgroundColor: "#303846",
     padding: 10,
-    marginBottom: 10
+    margin: Platform.OS == 'android' ? 2 : 10,
+    marginBottom: Platform.OS == 'ios' ? 10 : 5,
+    borderRadius: 10
+  },
+  countContainer: {
+    alignItems: 'center',
+    padding: 10
+  },
+  btnText: {
+    color: 'white',
+    fontSize: 15,
+
   }
 })
 
