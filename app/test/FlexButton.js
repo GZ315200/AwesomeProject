@@ -6,7 +6,6 @@ import {
     Platform
 } from 'react-native';
 
-
 const FlexButton = (props) => {
     return (
         <TouchableOpacity style={styles.button} onPress={props.onPress}>

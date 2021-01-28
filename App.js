@@ -20,13 +20,10 @@ import FlexButton from './app/test/FlexButton';
 
 export default App = () => {
   const [count, setCount] = useState(0);
-
   onPress = () => {
     setCount(count + 1)
   }
-
   return (
-    // <Greet></Greet>
     <SafeAreaView style={styles.container}>
       <View style={styles.countContainer}>
         <Text style={styles.text}>you checked {count} times</Text>
@@ -36,8 +33,6 @@ export default App = () => {
       </View>
     </SafeAreaView>
   );
-
-
 }
 
 const styles = StyleSheet.create({
