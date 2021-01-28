@@ -11,96 +11,50 @@ import React, { useState } from 'react';
 import {
   View,
   Text,
-  Button,
   SafeAreaView,
-  StyleSheet
+  StyleSheet,
+  Platform
 } from 'react-native';
 
-// import {
-//   Header,
-//   LearnMoreLinks,
-//   Colors,
-//   DebugInstructions,
-//   ReloadInstructions,
-// } from 'react-native/Libraries/NewAppScreen';
-
-// import Hello from './app/test/Hello';
-import Greet from './app/test/Greet';
-
-
+import FlexButton from './app/components/FlexButton';
 
 export default App = () => {
   const [count, setCount] = useState(0);
-
   onPress = () => {
     setCount(count + 1)
   }
 
+  onRefesh = () => {
+    setCount(0)
+  }
+
   return (
-    // <Greet></Greet>
     <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>you checked {count} times</Text>
-      <View style={styles.button}>
-        <Button onPress={this.onPress} title="Press me">
-        </Button>
+      <View style={styles.countContainer}>
+        <Text style={styles.text}>you checked {count} times</Text>
+      </View>
+      <View>
+        <FlexButton onPress={onPress} title='Press me'/>
+      </View>
+      <View>
+        <FlexButton onPress={onRefesh} title='Refresh'/>
       </View>
     </SafeAreaView>
   );
-
-
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignContent: "center"
+    justifyContent: 'flex-end',
+    paddingHorizontal: 10,
+  },
+  countContainer: {
+    alignItems: 'center',
+    padding: 10
   },
   text: {
-    left: 140
-  },
-  button: {
-    alignItems: 'center',
-    padding: 10,
-    marginBottom: 10
+    fontSize: 24,
+    color: "#303846",
   }
 })
-
-// const styles = StyleSheet.create({
-//   scrollView: {
-//     backgroundColor: Colors.lighter,
-//   },
-//   engine: {
-//     position: 'absolute',
-//     right: 0,
-//   },
-//   body: {
-//     backgroundColor: Colors.white,
-//   },
-//   sectionContainer: {
-//     marginTop: 32,
-//     paddingHorizontal: 24,
-//   },
-//   sectionTitle: {
-//     fontSize: 24,
-//     fontWeight: '600',
-//     color: Colors.black,
-//   },
-//   sectionDescription: {
-//     marginTop: 8,
-//     fontSize: 18,
-//     fontWeight: '400',
-//     color: Colors.dark,
-//   },
-//   highlight: {
-//     fontWeight: '700',
-//   },
-//   footer: {
-//     color: Colors.dark,
-//     fontSize: 12,
-//     fontWeight: '600',
-//     padding: 4,
-//     paddingRight: 12,
-//     textAlign: 'right',
-//   },
-// });
