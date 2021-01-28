@@ -18,9 +18,9 @@ const styles = StyleSheet.create({
     button: {
         alignItems: "center",
         backgroundColor: "#303846",
-        padding: 10,
-        margin: Platform.OS == 'android' ? 2 : 10,
-        marginBottom: Platform.OS == 'ios' ? 10 : 5,
+        padding: 15,
+        margin: Platform.OS == 'android' ? 1 : 5,
+        marginBottom: Platform.OS == 'ios' ? 1 : 5,
         borderRadius: 10
     },
     btnText: {

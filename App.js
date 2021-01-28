@@ -23,6 +23,11 @@ export default App = () => {
   onPress = () => {
     setCount(count + 1)
   }
+
+  onRefesh = () => {
+    setCount(0)
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.countContainer}>
@@ -31,6 +36,9 @@ export default App = () => {
       <View>
         <FlexButton onPress={onPress} title='Press me'/>
       </View>
+      <View>
+        <FlexButton onPress={onRefesh} title='refresh'/>
+      </View>
     </SafeAreaView>
   );
 }
@@ -38,7 +46,7 @@ export default App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'space-evenly',
+    justifyContent: 'flex-end',
     paddingHorizontal: 10,
   },
   countContainer: {
