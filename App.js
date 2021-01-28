@@ -29,7 +29,7 @@ export default App = () => {
     // <Greet></Greet>
     <SafeAreaView style={styles.container}>
       <View style={styles.countContainer}>
-        <Text>you checked {count} times</Text>
+        <Text style={styles.text}>you checked {count} times</Text>
       </View>
       <View>
         <FlexButton onPress={onPress} title='Press me'/>
@@ -43,11 +43,15 @@ export default App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-end',
+    justifyContent: 'space-evenly',
     paddingHorizontal: 10,
   },
   countContainer: {
     alignItems: 'center',
     padding: 10
+  },
+  text: {
+    fontSize: 15,
+    color: "#303846",
   }
 })
