@@ -20,10 +20,10 @@ import FlexButton from './app/components/FlexButton';
 
 export default App = () => {
   const [count, setCount] = useState(0);
+
   onPress = () => {
     setCount(count + 1)
   }
-
   onRefesh = () => {
     setCount(0)
   }
