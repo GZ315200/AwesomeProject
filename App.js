@@ -16,7 +16,7 @@ import {
   Platform
 } from 'react-native';
 
-import FlexButton from './app/test/FlexButton';
+import FlexButton from './app/components/FlexButton';
 
 export default App = () => {
   const [count, setCount] = useState(0);
@@ -37,7 +37,7 @@ export default App = () => {
         <FlexButton onPress={onPress} title='Press me'/>
       </View>
       <View>
-        <FlexButton onPress={onRefesh} title='refresh'/>
+        <FlexButton onPress={onRefesh} title='Refresh'/>
       </View>
     </SafeAreaView>
   );
